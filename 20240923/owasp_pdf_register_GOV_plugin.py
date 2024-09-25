@@ -68,11 +68,29 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
             "",
             "",
             "",
-            "Version: 2.0",
-            "Published: October 1, 2024"
+            "Version: 1.1",
+            "Published: April 10, 2024"
         ]
         cs["doc_toc_contents_title"] = "Contents"
         cs["doc_toc_figures_title"] = "Figures"
+        cs["doc_legal_notice"] = True
+        cs["doc_legal_notice_words"] = [
+            "The information provided in this document does not, and is not intended to, constitute legal advice.",
+            "All information is for general informational purposes only.",
+            "",
+            "This document contains links to other third-party websites. Such links are only for convenience",
+            "and OWASP does not recommend or endorse the contents of the third-party sites.",
+            "",
+            "This project is licensed under the terms of the Creative Commons Attribution-ShareAlike 4.0",
+            "International License.  ( https://creativecommons.org/licenses/by-sa/4.0/ )",
+            "",
+            "Revision History",
+            "    2023-11-01  English  0.1  initial draft",
+            "    2023-12-06  English  0.5  public draft",
+            "    2024-02-15  English  0.9  pre-release draft",
+            "    2024-02-19  English  1.0  public release v 1.0",
+            "    2024-04-10  English  1.1  public release v 1.1"
+        ]
     elif lang == "ja-JP":
         cs["doc_title"] = [
             "LLM AI サイバーセキュリティと",
