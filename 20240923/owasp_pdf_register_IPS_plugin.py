@@ -125,9 +125,10 @@ def _test():
     def get_cust_styles(lang):
         return {}
 
+    release_date: str = "20240923"
     dont_care = ""
-    my_proj_path = os.path.join(os.path.expanduser('~'), "Setotet_Origin/" + \
-        "www-project-top-10-for-large-language-model-applications/")
+    my_proj_path = os.path.join(os.path.expanduser('~'),
+        f"tetsuoseto_Origin/owasp_pdf_4/{release_date}")
     data_dir_path = Path(os.path.join(my_proj_path, "owasp_pdf_data_IPS"))
     proj_def_generator = register_project("IPS", ("en-ZZ",),
         data_dir_path, dont_care, get_cust_styles)

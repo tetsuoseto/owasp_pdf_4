@@ -75,14 +75,19 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
         cs["doc_toc_figures_title"] = "Figures"
         cs["doc_legal_notice"] = True
         cs["doc_legal_notice_words"] = [
-            "The information provided in this document does not, and is not intended to, constitute legal advice.",
+            "The information provided in this document does not, and is" + \
+                " not intended to, constitute legal advice.",
             "All information is for general informational purposes only.",
             "",
-            "This document contains links to other third-party websites. Such links are only for convenience",
-            "and OWASP does not recommend or endorse the contents of the third-party sites.",
+            "This document contains links to other third-party websites." + \
+                " Such links are only for convenience",
+            "and OWASP does not recommend or endorse the contents of the" + \
+                " third-party sites.",
             "",
-            "This project is licensed under the terms of the Creative Commons Attribution-ShareAlike 4.0",
-            "International License.  ( https://creativecommons.org/licenses/by-sa/4.0/ )",
+            "This project is licensed under the terms of the Creative " + \
+                "Commons Attribution-ShareAlike 4.0 ",
+            " International License. " + \
+                "( https://creativecommons.org/licenses/by-sa/4.0/ )",
             "",
             "Revision History",
             "    2023-11-01  English  0.1  initial draft",
@@ -259,9 +264,10 @@ def _test():
     def get_cust_styles(lang):
         return {}
 
+    release_date: str = "20240923"
     dont_care:str = ""
-    my_proj_path = os.path.join(os.path.expanduser('~'), "Setotet_Origin/" + \
-        "www-project-top-10-for-large-language-model-applications/")
+    my_proj_path = os.path.join(os.path.expanduser('~'),
+        f"tetsuoseto_Origin/owasp_pdf_4/{release_date}")
     data_dir_path = Path(os.path.join(my_proj_path, "owasp_pdf_data_GOV"))
     proj_def_generator = register_project("GOV", ("en-ZZ",),
         data_dir_path, dont_care, get_cust_styles)

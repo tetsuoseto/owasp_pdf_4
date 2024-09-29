@@ -48,22 +48,16 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
 
 def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
     cs["doc_title"] = [
-        "LLM and Gen AI Security",
-        "Center of Excellence",
-        "(CoE) Guide",
+        "OWASP Top 10 for",
+        "LLM Applications",
     ]
     cs["doc_subtitles"] = [
         "",
         "",
         "",
-        "From the OWASP Top 10 for LLM",
-        "Applications Team",
+        "VERSION 2.0",
         "",
-        "",
-        "",
-        "",
-        "Version: 0.5",
-        "Early Draft Published for Feedback: July 12, 2024",
+        "October 4, 2024",
     ]
     cs["doc_legal_notice_words"] = [
         "The information provided in this document does not," + \
@@ -106,12 +100,9 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
         "",
         "REVISION HISTORY",
         "",
-        "    2024-05-15  0.1  Scott Clinton  Initial Outline Draft",
-        "    2024-07-02  0.2  Scott Clinton, Updated with initial comments",
-        "                                 Sandy Dunn, Team",
-        "    2024-07-10  0.5  Open  Early draft, open for comment and input",
+        "    2024-10-04  2.0  Early draft",
     ]
-    cs["doc_header"] = "LLM and Gen AI Security Center of Excellence Guide"
+    cs["doc_header"] = "OWASP Top 10 for LLM Applications v2.0"
     cs["doc_toc_contents_title"] = "Contents"
     cs["doc_toc_figures_title"] = "Figures"
 
@@ -131,7 +122,7 @@ def _create_template_pdfs(proj_code, data_dir_path, temp_dir_path):
 def register_project(proj_code: str, lang_codes: Tuple[str, ...],
         data_dir_path:Path, temp_dir_path: str, get_customizable_styles):
 
-    if proj_code != "COE":
+    if proj_code != "LLM":
         return None
 
     use_default_templates = _create_template_pdfs(
@@ -143,7 +134,7 @@ def register_project(proj_code: str, lang_codes: Tuple[str, ...],
         yield {
             "proj_code": proj_code,
             "lang": lang,
-            "proj_dir": "coe",
+            "proj_dir": "2_0_vulns",
             "styles": customizable_styles,
             "use_default_templates": use_default_templates,
             }
@@ -159,13 +150,13 @@ def _test():
     dont_care:str = ""
     my_proj_path = os.path.join(os.path.expanduser('~'),
         f"tetsuoseto_Origin/owasp_pdf_4/{release_date}")
-    data_dir_path = Path(os.path.join(my_proj_path, "owasp_pdf_data_COE"))
-    proj_def_generator = register_project("COE", ("en-ZZ",),
+    data_dir_path = Path(os.path.join(my_proj_path, "owasp_pdf_data_LLM"))
+    proj_def_generator = register_project("LLM", ("en-ZZ",),
         data_dir_path, dont_care, get_cust_styles)
     for proj_def in proj_def_generator:
-        assert proj_def["proj_code"] == "COE"
+        assert proj_def["proj_code"] == "LLM"
         assert proj_def["lang"] == "en-ZZ"
-        assert proj_def["proj_dir"] == "coe"
+        assert proj_def["proj_dir"] == "2_0_vulns"
         assert isinstance(proj_def["styles"], dict)
         assert proj_def["styles"]["chapter_font.size"] == 999
     print("Test: success!!")

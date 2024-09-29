@@ -1,6 +1,6 @@
 # OWASP PDF 4 Release Repository
 ## 20240923 Update
-### Supported projects: GOV, COE, IPS
+### Supported projects: GOV, COE, IPS, LLM
 ### Project registration package
     - custom style json
     - document image files
