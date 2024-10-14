@@ -34,7 +34,7 @@ The most pressing non-adversary LLM threat for many organizations stem from "Sha
 >dodgerblue|white|left|14|18 Step 6: Choose a Deployment Strategy
 
 ##### Figure 2.1  Options for Deployment Strategy
-##### credit sdunn
+####@ credit sdunn
 
 
 ### Deployment Strategy
@@ -85,4 +85,4 @@ The scopes range from leveraging public consumer applications to training propri
     >fidlightblue|black|left|12|16 ▶ Pros: Requires large investment but maximizes customization
 
 ##### Figure 2.2 Options for Deployment Types
-##### credit: sdunn
+####@ credit: sdunn

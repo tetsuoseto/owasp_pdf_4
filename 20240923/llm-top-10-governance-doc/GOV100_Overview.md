@@ -42,7 +42,7 @@ As challenges and benefits of Artificial Intelligence emerge – and regulations
     >dodgerblue|white|left|12|16 Purposeful
 
 ##### Figure 1.1  Pillars of Trustworthy Artificial Intelligence
-##### created from Montreal Ethics Institute Example
+####@ created from Montreal Ethics Institute Example
 
 ### Who is This For?
 
@@ -85,7 +85,7 @@ Understanding the different kinds of threats and integrating them with the busin
     >darkblue|white|left|14|18 AI Legal & regulatory Threats
 
 ##### Figure 1.2  Types of AI Threats
-##### credit sdunn
+####@ credit sdunn
 
 
 
@@ -95,7 +95,7 @@ Employees throughout organizations benefit from training to understand artificia
 
 Fair use policies and healthy interaction are key aspects that, if incorporated from the very start, will be a cornerstone to the success of future AI cybersecurity awareness campaigns. This will necessarily provide user's with knowledge of the basic rules for interaction as well as the ability to separate good behavior from bad or unethical behavior.
 
-### Incorporate LLM Security and governance with Existing, Established
+##$ Incorporate LLM Security and governance with Existing, Established
 ### Practices and Controls
 
 While AI and generated AI add a new dimension to cybersecurity, resilience, privacy, and meeting legal and regulatory requirements, the best practices that have been around for a long time are still the best way to identify issues, find vulnerabilities, fix them, and mitigate potential security issues. 

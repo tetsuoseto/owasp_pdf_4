@@ -43,85 +43,85 @@
 Using LLM solutions expands an organization's attack surface and presents new challenges, requiring special tactics and defenses. It also poses problems that are similar to known issues, and where there are already established cybersecurity procedures and mitigations. Integrating LLM cybersecurity with an organization's established cybersecurity controls, processes, and procedures allows an organization to reduce its vulnerability to threats.
 How they integrate is available at the [OWASP Integration Standards.](https://owasp.org/www-project-integration-standards/)
 
-#### OWASP Resource
+#### 1. Software Assurance Maturity Model
   [OWASP SAMM](https://owasp.org/www-project-samm/)
-#### Description
+###@ Description
   Software Assurance Maturity Model
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Provides an effective and measurable way to analyze and improve an organization's secure development lifecycle. SAMM supports the complete software lifecycle. It is iterative and risk-driven, enabling organizations to identify and prioritize gaps in secure software development so resources for improving the process can be dedicated where efforts have the greatest improvement impact.
 
-#### OWASP Resource
+#### 2. AI Exchange & Machine Learning Security Top 10
   [OWASP AI Exchange](https://owasp.org/www-project-ai-security-and-privacy-guide/owaspaiexchange.html)
   [OWASP Machine Learning Security Top 10](https://mltop10.info/)
-#### Description
+###@ Description
   OWASP Project to connect worldwide for an exchange on AI security, fostering standards alignment, and driving collaboration.
   OWASP AI Exchange is the intake method for the OWASP AI Security and Privacy Guide
   OWASP Machine Learning Security Top 10 security issues of machine learning systems
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   This project includes the ML Top 10 and is a live working document that provides clear and actionable insights on designing, creating, testing, and procuring secure and privacy-preserving AI systems. It is the best OWASP resource for AI global regulatory and privacy information.
 
-#### OWASP Resource
+#### 3. Open Common Requirement Enumeration : OpenCRE
    [Open Common Requirement Enumeration : OpenCRE](https://www.opencre.org/)
-#### Description
+###@ Description
   OpenCRE is the interactive content-linking platform for uniting security standards and guidelines into one overview.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Use this site to search for standards. You can search by standard name or by control type.
 
-#### OWASP Resource
+#### 4. Threat Modeling
   [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling)
-#### Description
+###@ Description
   A structured, formal process for threat modeling of an application
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Learn everything about Threat Modeling which is a structured representation of all the information that affects the security of an application.
 
-#### OWASP Resource
+#### 5. CycloneDX
   [OWASP CycloneDX](https://owasp.org/www-project-cyclonedx/)
-#### Description
+###@ Description
   OWASP CycloneDX is a full-stack Bill of Materials (BOM) standard that provides advanced supply chain capabilities for cyber risk reduction.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Modern software is assembled using third-party and open source components. They are glued together in complex and unique ways and integrated with original code to achieve the desired functionality. An SBOM provides an accurate inventory of all components which enables organizations to identify risk, allows for greater transparency, and enables rapid impact analysis.
   [EO 14028](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains-software-1) provided minimum requirements for SBOM for federal systems.
 
-#### OWASP Resource
+#### 6. Software Component Verification Standard (SCVS)
   [OWASP Software Component Verification Standard (SCVS)](https://scvs.owasp.org/)
-#### Description
+###@ Description
   A community-driven effort to establish a framework for identifying activities, controls, and best practices to identify and reduce risk in a software supply chain.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Use SCVS to develop a common set of activities, controls, and best practices that can reduce risk in a software supply chain and identify a baseline and path to mature software supply chain vigilance.
 
-#### OWASP Resource
+#### 7. API Security Project
   [OWASP API Security Project](https://owasp.org/www-project-api-security/)
-#### Description
+###@ Description
   API Security focuses on strategies and solutions to understand and mitigate the unique vulnerabilities and security risks of Application Programming Interfaces (APIs).
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   APIs are a foundational element of connecting applications and mitigating misconfigurations or vulnerabilities is mandatory to protect users and organizations. Use for security testing and red teaming the build and production environments.
 
-#### OWASP Resource
+#### 8. Top 10 CI/CD Security Risks
   [OWASP Top 10 CI/CD Security Risks](https://owasp.org/www-project-top-10-ci-cd-security-risks/)
-#### Description
+###@ Description
   Helps defenders identify focus areas for securing their CI/CD ecosystem.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   CI/CD environments, processes, and systems are the ecosystem of modern software organizations. They deliver code from an engineer's workstation to production. They have their unique attack surface and a frequent attack target. Use for security testing and red teaming the build and production environments. 
 
-#### OWASP Resource
+#### 9. Application Security Verification Standard ASVS
   [OWASP Application Security Verification Standard ASVS](https://owasp.org/www-project-application-security-verification-standard/)
-#### Description
+###@ Description
   Application Security Verification Standard (ASVS) Project provides a basis for testing web application technical security controls and also provides developers with a list of requirements for secure development.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Cookbook for web application security requirements, security testing, and metrics. Use to establish security user stories and security use case release testing.
 
-#### OWASP Resource
+#### 10. Threat and Safeguard Matrix (TaSM)
   [OWASP Threat and Safeguard Matrix (TaSM)](https://owasp.org/www-project-threat-and-safeguard-matrix/)
-#### Description
+###@ Description
   An action oriented view to safeguard and enable the business
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   This matrix allows a company to overlay its major threats with the NIST Cyber Security Framework Functions (Identify, Protect, Detect, Respond, & Recover) to build a robust security plan. Use it as a dashboard to track and report on security across the organization.
 
-#### OWASP Resource
+#### 11. Defect Dojo
    [Defect Dojo](https://www.defectdojo.com/)
-#### Description
+###@ Description
   An open-source vulnerability management tool that streamlines the testing process by offering templating, report generation, metrics, and baseline self-service tools.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Use Defect Dojo to reduce the time for logging vulnerabilities with templates for vulnerabilities, imports for common vulnerability scanners, report generation, and metrics.
 
 
@@ -135,76 +135,76 @@ MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) is a framew
 
 MITRE ATLAS, which stands for "Adversarial Threat Landscape for Artificial Intelligence Systems," is a knowledge base that is based on real-life examples of attacks on machine learning (ML) systems by bad actors. ATLAS is based on the MITRE ATT&CK architecture, and its tactics and procedures complement those found in ATT&CK.
 
-#### MITRE Resource
+#### 1. ATT&CK
   [MITRE ATT&CK](https://attack.mitre.org/)
-#### Description
+###@ Description
   Knowledge base of adversary tactics and techniques based on real-world observations
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies. Map existing controls within the organization to adversary tactics and techniques to identify gaps or areas to test.
 
-#### MITRE Resource
+#### 2. AT&CK Workbench
   [MITRE AT&CK Workbench](https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/our-work/attck-workbench/)
-#### Description
+###@ Description
   Create or extend ATT&CK data in a local knowledge base
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Host and manage a customized copy of the ATT&CK knowledge base. This local copy of the ATT&CK knowledge base can be extended with new or updated techniques, tactics, mitigation groups, and software that is specific to your organization.
 
-#### MITRE Resource
+#### 3. ATLAS
    [MITRE ATLAS](https://atlas.mitre.org/)
-#### Description
+###@ Description
   MITRE ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems) is a knowledge base of adversary tactics, techniques, and case studies for machine learning (ML) systems based on real-world observations, demonstrations from ML red teams and security groups, and the state of the possible from academic research
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Use it to map known ML vulnerabilities and map checks and controls for proposed projects or existing systems.
 
-#### MITRE Resource
+#### 4. ATT&CK Powered Suit
   [MITRE ATT&CK Powered Suit](https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/attack-powered-suit/)
-#### Description
+###@ Description
   ATT&CK Powered Suit is a browser extension that puts the MITRE ATT&CK knowledge base at your fingertips.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Add to your browser to quickly search for tactics, techniques, and more without disrupting your workflow.
 
-#### MITRE Resource
+#### 5. The Threat Report ATT&CK Mapper (TRAM)
   [The Threat Report ATT&CK Mapper (TRAM)](https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/our-work/threat-report-attck-mapper-tram/)
-#### Description
+###@ Description
   Automates TTP Identification in CTI Reports
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Mapping TTPs found in CTI reports to MITRE ATT&CK is difficult, error prone, and time-consuming. TRAM uses LLMs to automate this process for the 50 most common techniques. Supports Juypter notebooks.
 
-#### MITRE Resource
+#### 6. Attack Flow v2.1.0
    [Attack Flow v2.1.0](https://center-for-threat-informed-defense.github.io/attack-flow/)
-#### Description
+###@ Description
   Attack Flow is a language for describing how cyber adversaries combine and sequence various offensive techniques to achieve their goals.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Attack Flow helps visualize how an attacker uses a technique, so defenders and leaders understand how adversaries operate and improve their defensive posture.
 
-#### MITRE Resource
+#### 7. Caldera
   [MITRE Caldera](https://caldera.mitre.org/)
-#### Description
+###@ Description
   A cyber security platform (framework) designed to easily automate adversary emulation, assist manual red teams, and automate incident response.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Plugins are available for Caldera that help to expand the core capabilities of the framework and provide additional functionality, including agents, reporting, collections of TTPs, and others.
   [Here is the plugin library.](https://caldera.readthedocs.io/en/latest/Plugin-library.html)
 
-#### MITRE Resource
+#### 8. CALDERA plugin: Arsenal
   [CALDERA plugin: Arsenal](https://www.mitre.org/news-insights/news-release/microsoft-and-mitre-create-tool-help-security-teams-prepare-attacks)
-#### Description
+###@ Description
   A plugin developed for adversary emulation of AI-enabled systems.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   This plugin provides TTPs defined in MITRE ATLAS to interface with CALDERA.
 
-#### MITRE Resource
+#### 9. Atomic Red Team
   [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
-#### Description
+###@ Description
   Library of tests mapped to the MITRE ATT&CK framework.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   Use to validate and test controls in an environment. Security teams can use Atomic Red Team to test controls.
   You can execute atomic tests directly from the command line; no installation is required.
 
-#### MITRE Resource
+#### 10. CTI Blueprints
   [MITRE CTI Blueprints](https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/our-work/cti-blueprints/)
-#### Description
+###@ Description
   Automates Cyber Threat Intelligence reporting.
-#### Why it is Recommended & Where To Use It
+###@ Why it is Recommended & Where To Use It
   CTI Blueprints helps Cyber Threat Intelligence (CTI) analysts create high-quality, actionable reports more consistently and efficiently
 
 
