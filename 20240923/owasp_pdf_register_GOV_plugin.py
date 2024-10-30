@@ -42,15 +42,32 @@ from reportlab.pdfgen.canvas import Canvas # type: ignore
 from reportlab.lib.pagesizes import A4, LETTER # type: ignore
 
 def _set_proj_common_fields(cs: Dict[str, Any]):
-    cs["doc_title_pivot.pt_y"] = 324
-    cs["doc_title_font.size"] = 40
-    cs["doc_title_font.line_pitch"] = 48
-    cs["doc_subtitle_font.size"] = 20
-    cs["doc_subtitle_font.line_pitch"] = 24
-    cs["doc_toc_title_font.size"] = 24
-    cs["chapter_font.color"] = "white"
-    cs["chapter_pivot.pt_y"] = 42.5
-    cs["doc_appendix_titles"] = []
+    new_cs: Dict[str, Any] = {
+        "doc_template_type": "custom",
+        "doc_title_pivot.pt_x": 300, # temporary
+        "doc_title_pivot.pt_y": 324,
+        "doc_toc_title_pivot.pt_x": 72,
+        "doc_toc_title_pivot.pt_y": 0,
+        "chapter_pivot.pt_y": 32,
+        "doc_title_font.line_alignment": "center",
+        "doc_title_font.size": 40,
+        "doc_title_font.line_pitch": 48,
+        "doc_subtitle_font.size": 20, # 16
+        "doc_subtitle_font.line_alignment": "center",
+        "doc_toc_title_font.size": 24,
+        "doc_toc_title_font.line_alignment": "center",
+        "doc_site_name": "genai.owasp.org",
+        "doc_site_url": "https://genai.owasp.org/",
+        "chapter_font.line_alignment": "center",
+        "chapter_font.color": "white",
+        "chapter_font.size": 24,
+        "section_font.size": 16,
+        "doc_appendix_titles": [],
+    }
+    for key in new_cs:
+        assert key in cs, \
+            f"'{key}' is not defined in customizable styles."
+    cs.update(new_cs)
 
 def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
     if lang[:2] == "en":
@@ -62,16 +79,13 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
             "",
             "",
             "",
-            "From the OWASP Top 10",
-            "for LLM Applications Team",
-            "",
-            "",
+            "From the OWASP Top 10 for LLM Applications Team",
             "",
             "",
             "Version: 1.1",
             "Published: April 10, 2024"
         ]
-        cs["doc_toc_contents_title"] = "Contents"
+        cs["doc_toc_contents_title"] = "Table of Contents"
         cs["doc_toc_figures_title"] = "Figures"
         cs["doc_legal_notice"] = True
         cs["doc_legal_notice_words"] = [
@@ -218,6 +232,16 @@ def _create_gov_cover_page(paper_size: Tuple, paper_size_str: str,
     _merge_pdf(cover_page_path, cover_page_path, owasp_logo_pdf)
     # pylint: enable=duplicate-code
 
+def _create_gov_blank_page(paper_size: Tuple, paper_size_str: str,
+        data_dir_path: Path, temp_dir_path: str, temp_type: str):
+    assert temp_type in ["toc", "body"]
+    temp_id: int = 4 if temp_type == "toc" else 3
+    cover_page_name = f"{temp_id}_gov_{temp_type}_{paper_size_str}.pdf"
+    cover_page_path = data_dir_path/"templates/page_pdfs"/cover_page_name
+    canvas = Canvas(str(cover_page_path), pagesize=paper_size)
+    canvas.showPage()
+    canvas.save()
+
 def _create_template_pdfs(proj_code, data_dir_path, temp_dir_path):
     paper_sizes = [LETTER, A4]
     for paper_size in paper_sizes:
@@ -226,6 +250,10 @@ def _create_template_pdfs(proj_code, data_dir_path, temp_dir_path):
             data_dir_path, temp_dir_path)
         _create_gov_chapter_page(paper_size, paper_size_str,
             data_dir_path, temp_dir_path)
+        _create_gov_blank_page(paper_size, paper_size_str,
+            data_dir_path, temp_dir_path, "body")
+        _create_gov_blank_page(paper_size, paper_size_str,
+            data_dir_path, temp_dir_path, "toc")
     use_default_templates = False
     return use_default_templates
 

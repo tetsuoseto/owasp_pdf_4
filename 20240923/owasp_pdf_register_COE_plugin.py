@@ -38,13 +38,31 @@ from typing import Any, Dict, Tuple
 from pdb import set_trace # pylint: disable=unused-import
 
 def _set_proj_common_fields(cs: Dict[str, Any]):
-    cs["doc_title_pivot.pt_y"] = 250
-    cs["doc_title_font.size"] = 40
-    cs["doc_title_font.line_pitch"] = 48
-    cs["doc_subtitle_font.size"] = 20
-    cs["doc_subtitle_font.line_pitch"] = 24
-    cs["chapter_font.color"] = "white"
-    cs["doc_appendix_titles"] = []
+    new_cs: Dict[str, Any] = {
+        "doc_template_type": "modern_gray",
+        "doc_title_pivot.pt_x": 72,
+        "doc_title_pivot.pt_y": 430,
+        "doc_toc_title_pivot.pt_x": 72,
+        "doc_toc_title_pivot.pt_y": 100,
+        "doc_header_pivot.pt_x": 140,
+        "doc_header_pivot.pt_y": 150,
+        "chapter_pivot.pt_x": 72,
+        "chapter_pivot.pt_y": 130,
+        "doc_title_font.size": 40,
+        "doc_title_font.line_pitch": 48,
+        "doc_subtitle_font.size": 16,
+        "doc_subtitle_font.line_pitch": 24,
+        "doc_site_name": "genai.owasp.org",
+        "doc_site_url": "https://genai.owasp.org/",
+        "chapter_font.color": "black",
+        "chapter_font.size": 24,
+        "section_font.size": 16,
+        "doc_appendix_titles": [],
+    }
+    for key in new_cs:
+        assert key in cs, \
+            f"'{key}' is not defined in customizable styles."
+    cs.update(new_cs)
 
 def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
     cs["doc_title"] = [
@@ -55,12 +73,7 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
     cs["doc_subtitles"] = [
         "",
         "",
-        "",
-        "From the OWASP Top 10 for LLM",
-        "Applications Team",
-        "",
-        "",
-        "",
+        "From the OWASP Top 10 for LLM Applications Team",
         "",
         "Version: 0.5",
         "Early Draft Published for Feedback: July 12, 2024",
@@ -92,16 +105,19 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
             " in any way that suggests",
         "      the licensor endorses you or your use.",
         "    Attribution Guidelines - must include the project name" + \
-            " and the name of the asset Referenced.",
-        "      OWASP Top 10 for LLMs - LLM AI Security Center of" + \
-            " Excellence (CoE) Guide",
-        "      OWASP Top 10 for LLMs - LLM AI Security Center of" + \
-            " Excellence Guide",
-        "      OWASP Top 10 for LLMs - LLM AI Security CoE Guide",
+            " and the name of the asset referenced.",
         "    ShareAlike — If you remix, transform, or build upon " + \
             "the material, you must distribute",
         "      your contributions under the same license as the original.",
+        "Link to full license text:",
         "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+        "",
+        "The information provided in this document does not, and is not",
+        "intended to, constitute legal advice. All information is for",
+        "general informational purposes only. This document contains links to",
+        "other third-party websites. Such links are only for convenience and",
+        "OWASP does not recommend or endorse the contents of " + \
+            "the third-party sites.",
         "",
         "",
         "REVISION HISTORY",
@@ -112,8 +128,18 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
         "    2024-07-10  0.5  Open  Early draft, open for comment and input",
     ]
     cs["doc_header"] = "LLM and Gen AI Security Center of Excellence Guide"
-    cs["doc_toc_contents_title"] = "Contents"
+    cs["doc_toc_contents_title"] = "Table of Contents"
     cs["doc_toc_figures_title"] = "Figures"
+    if lang in ('ar-SA', 'he-IL'):
+        cs["doc_title_font.line_alignment"] = "right"
+        cs["doc_subtitle_font.line_alignment"] = "right"
+        cs["doc_toc_title_font.line_alignment"] = "right"
+        cs["chapter_font.line_alignment"] = "right"
+    else:
+        cs["doc_title_font.line_alignment"] = "left"
+        cs["doc_subtitle_font.line_alignment"] = "left"
+        cs["doc_toc_title_font.line_alignment"] = "left"
+        cs["chapter_font.line_alignment"] = "left"
 
 def _create_template_pdfs(proj_code, data_dir_path, temp_dir_path):
     use_default_templates = True

@@ -37,13 +37,17 @@ from pathlib import Path
 from typing import Any, Dict, Tuple
 
 def _set_proj_common_fields(cs: Dict[str, Any]):
+    cs["doc_template_type"] = "blank"
     cs["doc_title"] = [
-        "",
+
         "",
         "",
         "Lorem Ipsum"
     ]
+    cs["doc_title_pivot.pt_x"] = 300
     cs["doc_title_pivot.pt_y"] = 200
+    cs["doc_toc_title_pivot.pt_x"] = 72
+    cs["doc_toc_title_pivot.pt_y"] = 0
     cs["doc_subtitles"] = [
         "",
         "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",
@@ -74,8 +78,12 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
     ]
     cs["doc_title_font.size"] = 50
     cs["doc_title_font.line_pitch"] = 55
+    cs["doc_title_font.line_alignment"] = "center"
     cs["doc_subtitle_font.size"] = 14
     cs["doc_subtitle_font.line_pitch"] = 26.4
+    cs["doc_subtitle_font.line_alignment"] = "center"
+    cs["doc_toc_title_font.size"] = 24
+    cs["doc_toc_title_font.line_alignment"] = "center"
     cs["chapter_pivot.pt_y"] = 67.7
     cs["chapter_font.color"] = "black"
     cs["header_font.color"] = "black"
@@ -83,12 +91,16 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
         "Appendix 1: OWASP PDF Document Model (Title Page)",
         "Appendix 2: OWASP PDF Document Model (Chapter Page)",
         ]
+    cs["doc_sponsor_page_titles"] = [
+        "OWASP Top 10 for LLM Applications Project Sponsors and Supporters",
+        "OWASP Top 10 for LLM Applications Project Supporters",
+        ]
 
 def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
     pass
 
 def _create_template_pdfs(proj_code, data_dir_path, temp_dir_path):
-    use_default_templates = False
+    use_default_templates = True
     return use_default_templates
 
 # register_project does two things:

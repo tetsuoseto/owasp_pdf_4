@@ -38,73 +38,116 @@ from typing import Any, Dict, Tuple
 from pdb import set_trace # pylint: disable=unused-import
 
 def _set_proj_common_fields(cs: Dict[str, Any]):
-    cs["doc_title_pivot.pt_y"] = 250
-    cs["doc_title_font.size"] = 40
-    cs["doc_title_font.line_pitch"] = 48
-    cs["doc_subtitle_font.size"] = 20
-    cs["doc_subtitle_font.line_pitch"] = 24
-    cs["chapter_font.color"] = "white"
-    cs["doc_appendix_titles"] = []
+    new_cs: Dict[str, Any] = {
+        "doc_template_type": "modern_blue",
+        "doc_title_pivot.pt_x": 72,
+        "doc_title_pivot.pt_y": 475,
+        "doc_toc_title_pivot.pt_x": 72,
+        "doc_toc_title_pivot.pt_y": 100,
+        "doc_header_pivot.pt_x": 140,
+        "doc_header_pivot.pt_y": 150,
+        "chapter_pivot.pt_x": 72,
+        "chapter_pivot.pt_y": 130,
+        "doc_title_font.size": 40,
+        "doc_title_font.line_pitch": 48,
+        "doc_subtitle_font.size": 16,
+        "doc_subtitle_font.line_pitch": 24,
+        "doc_site_name": "genai.owasp.org",
+        "doc_site_url": "https://genai.owasp.org/",
+        "chapter_font.color": "black",
+        "chapter_font.size": 24,
+        "section_font.size": 16,
+        "doc_appendix_titles": [
+            "Appendix 1: LLM Application Architecture and Threat Modeling",
+            ],
+        "doc_sponsor_page_titles": [
+            "OWASP Top 10 for LLM Applications Project Sponsors",
+            "Project Supporters",
+            ],
+    }
+    for key in new_cs:
+        assert key in cs, \
+            f"'{key}' is not defined in customizable styles."
+    cs.update(new_cs)
 
 def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
     cs["doc_title"] = [
         "OWASP Top 10 for",
-        "LLM Applications",
+        "LLM Applications 2025",
     ]
     cs["doc_subtitles"] = [
         "",
         "",
         "",
-        "VERSION 2.0",
         "",
-        "October 4, 2024",
+        "Version 2025 Release Candidate 2",
+        "November 10, 2024"
     ]
     cs["doc_legal_notice_words"] = [
-        "The information provided in this document does not," + \
-            " and is not intended to,",
-        "constitute legal advice. All information is for general " + \
-            "informational purposes only.",
-        "",
-        "This document contains links to other third-party websites.",
-        "Such links are only for convenience and OWASP does not" + \
-            " recommend or endorse",
-        "the contents of the third-party sites.",
-        "",
-        "",
         "LICENSE AND USAGE",
         "",
-        "This document is licensed under Creative Commons, CC BY-SA 4.0",
+        "This document is licensed under Creative Commons, CC BY-SA 4.0.",
+        "",
         "You are free to:",
-        "  Share — copy and redistribute the material in any medium" + \
-            " or format",
-        "  Adapt — remix, transform, and build upon the material for" + \
-            " any purpose, even commercially.",
-        "    under the following terms:",
+        "    Share — copy and redistribute the material in any medium" + \
+            " or format for any purpose,",
+        "        even commercially.",
+        "    Adapt — remix, transform, and build upon the material" + \
+            " for any purpose,",
+        "        even commercially.",
+        "",
+        "    The licensor cannot revoke these freedoms as long as you" + \
+            " follow the license terms.",
+        "",
+        "Under the following terms:",
         "    Attribution — You must give appropriate credit, provide" + \
             " a link to the license, and indicate",
-        "      if changes were made. You may do so reasonably, but not" + \
-            " in any way that suggests",
-        "      the licensor endorses you or your use.",
-        "    Attribution Guidelines - must include the project name" + \
-            " and the name of the asset Referenced.",
-        "      OWASP Top 10 for LLMs - LLM AI Security Center of" + \
-            " Excellence (CoE) Guide",
-        "      OWASP Top 10 for LLMs - LLM AI Security Center of" + \
-            " Excellence Guide",
-        "      OWASP Top 10 for LLMs - LLM AI Security CoE Guide",
+        "        if changes were made. You may do so in any reasonable" + \
+            " manner, but not in any way",
+        "        that suggests the licensor endorses you or your use.",
         "    ShareAlike — If you remix, transform, or build upon " + \
             "the material, you must distribute",
-        "      your contributions under the same license as the original.",
-        "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+        "        your contributions under the same license as the original.",
+        "    No additional restrictions — You may not apply legal terms or" + \
+            " technological measures",
+        "        that legally restrict others from doing anything" + \
+            " the license permits.",
+        "",
+        "Link to full license text:" + \
+            " https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+        "",
+        "The information provided in this document does not," + \
+            " and is not intended to constitute",
+        "legal advice. All information is for general informational" + \
+            " purposes only.",
+        "This document contains links to other third-party websites." + \
+            " Such links are only for",
+        "convenience and OWASP does not recommend or endorse the contents" + \
+            " of the third-party",
+        "sites.",
         "",
         "",
         "REVISION HISTORY",
         "",
-        "    2024-10-04  2.0  Early draft",
+        "    2023-08-01 Version 1.0 Release",
+        "    2023-10-16 Version 1.1 Release",
+        "    2024-11-10 Version 2025 Release Candidate 2"
     ]
     cs["doc_header"] = "OWASP Top 10 for LLM Applications v2.0"
-    cs["doc_toc_contents_title"] = "Contents"
+    cs["doc_toc_contents_title"] = "Table of Contents"
     cs["doc_toc_figures_title"] = "Figures"
+    if lang in ('ar-SA', 'he-IL'):
+        cs["doc_title_font.line_alignment"] = "right"
+        cs["doc_subtitle_font.line_alignment"] = "right"
+        cs["doc_toc_title_font.line_alignment"] = "right"
+        cs["chapter_font.line_alignment"] = "right"
+        cs["doc_toc_title_pivot.pt_y"] = 115
+        cs["chapter_pivot.pt_y"] = 145
+    else:
+        cs["doc_title_font.line_alignment"] = "left"
+        cs["doc_subtitle_font.line_alignment"] = "left"
+        cs["doc_toc_title_font.line_alignment"] = "left"
+        cs["chapter_font.line_alignment"] = "left"
 
 def _create_template_pdfs(proj_code, data_dir_path, temp_dir_path):
     use_default_templates = True
