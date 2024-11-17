@@ -61,8 +61,8 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
             "Appendix 1: LLM Application Architecture and Threat Modeling",
             ],
         "doc_sponsor_page_titles": [
-            "OWASP Top 10 for LLM Applications Project Sponsors",
-            "Project Supporters",
+            "Project Sponsors",
+            "Supporters"
             ],
     }
     for key in new_cs:
@@ -80,8 +80,8 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
         "",
         "",
         "",
-        "Version 2025 Release Candidate 2",
-        "November 10, 2024"
+        "Version 2025",
+        "November 18, 2024"
     ]
     cs["doc_legal_notice_words"] = [
         "LICENSE AND USAGE",
@@ -131,9 +131,9 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
         "",
         "    2023-08-01 Version 1.0 Release",
         "    2023-10-16 Version 1.1 Release",
-        "    2024-11-10 Version 2025 Release Candidate 2"
+        "    2024-11-18 Version 2025 Release"
     ]
-    cs["doc_header"] = "OWASP Top 10 for LLM Applications v2.0"
+    cs["doc_header"] = ""
     cs["doc_toc_contents_title"] = "Table of Contents"
     cs["doc_toc_figures_title"] = "Figures"
     if lang in ('ar-SA', 'he-IL'):
