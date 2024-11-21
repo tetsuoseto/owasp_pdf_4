@@ -47,7 +47,7 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
     cs["doc_title_pivot.pt_x"] = 300
     cs["doc_title_pivot.pt_y"] = 200
     cs["doc_toc_title_pivot.pt_x"] = 72
-    cs["doc_toc_title_pivot.pt_y"] = 0
+    cs["doc_toc_title_pivot.pt_y"] = 72  # add 15 for bi-di for optimal result
     cs["doc_subtitles"] = [
         "",
         "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet",

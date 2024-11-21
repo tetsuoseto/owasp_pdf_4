@@ -43,7 +43,7 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
         "doc_title_pivot.pt_x": 72,
         "doc_title_pivot.pt_y": 430,
         "doc_toc_title_pivot.pt_x": 72,
-        "doc_toc_title_pivot.pt_y": 100,
+        "doc_toc_title_pivot.pt_y": 172, # add 15 for bi-di for optimal result
         "doc_header_pivot.pt_x": 140,
         "doc_header_pivot.pt_y": 150,
         "chapter_pivot.pt_x": 72,

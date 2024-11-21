@@ -47,7 +47,7 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
         "doc_title_pivot.pt_x": 300, # temporary
         "doc_title_pivot.pt_y": 324,
         "doc_toc_title_pivot.pt_x": 72,
-        "doc_toc_title_pivot.pt_y": 0,
+        "doc_toc_title_pivot.pt_y": 144, # add 15 for bi-di for optimal result
         "chapter_pivot.pt_y": 32,
         "doc_title_font.line_alignment": "center",
         "doc_title_font.size": 40,
@@ -63,6 +63,7 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
         "chapter_font.size": 24,
         "section_font.size": 16,
         "doc_appendix_titles": [],
+        "unordered_list_marker": "square",
     }
     for key in new_cs:
         assert key in cs, \

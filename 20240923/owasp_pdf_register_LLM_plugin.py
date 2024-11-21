@@ -43,7 +43,7 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
         "doc_title_pivot.pt_x": 72,
         "doc_title_pivot.pt_y": 475,
         "doc_toc_title_pivot.pt_x": 72,
-        "doc_toc_title_pivot.pt_y": 100,
+        "doc_toc_title_pivot.pt_y": 172,
         "doc_header_pivot.pt_x": 140,
         "doc_header_pivot.pt_y": 150,
         "chapter_pivot.pt_x": 72,
@@ -141,7 +141,7 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
         cs["doc_subtitle_font.line_alignment"] = "right"
         cs["doc_toc_title_font.line_alignment"] = "right"
         cs["chapter_font.line_alignment"] = "right"
-        cs["doc_toc_title_pivot.pt_y"] = 115
+        cs["doc_toc_title_pivot.pt_y"] = 187
         cs["chapter_pivot.pt_y"] = 145
     else:
         cs["doc_title_font.line_alignment"] = "left"
