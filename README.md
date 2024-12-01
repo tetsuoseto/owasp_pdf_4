@@ -1,5 +1,5 @@
 # OWASP PDF 4 Release Repository
-## 20241124 Update
+## 20241129 Update
 ### Supported projects: GOV, COE, IPS, LLM
 ### Project registration package
     - custom style json
@@ -7,10 +7,10 @@
     - template image files
     - plug-in Python script: owasp_pdf_register_<proj_code>_plugin.py
 
-To install OWASP PDF 4.2 executable on your Mac,
+To install OWASP PDF 4.2.1 executable on your Mac,
 1. `git clone` or [Download ZIP](https://github.com/tetsuoseto/owasp_pdf_4/archive/refs/heads/main.zip) of this repo (owasp_pdf_4) under any directory, e.g., `Playbook` on your desktop: `~/Desktop/Playbook`
-2. Double Click dist_4.2.0_20241124 zip file to decompress it to `~/Desktop/Playbook/dist_4.2.0_20241124` folder
-3. Open terminal window, `cd` to `~/Desktop/Playbook/dist_4.2.0_20241124` directory and run `shasum -a 256 owasp_pdf` to calculate the sha256 hash code of `owasp_pdf` executable. It should match `284359484ca905a9a25aa86ad01be4b671cd6823c614755d88c534f2647bb522`
+2. Double Click dist_4.2.1_20241129 zip file to decompress it to `~/Desktop/Playbook/dist_4.2.1_20241129` folder
+3. Open terminal window, `cd` to `~/Desktop/Playbook/dist_4.2.1_20241129` directory and run `shasum -a 256 owasp_pdf` to calculate the sha256 hash code of `owasp_pdf` executable. It should match `f5fd260a074df3fc6aefaf05d8fe40fd9b96e9c075f47304d49f9125fa726fbb`
 4. Copy `owasp_pdf` executable file to `~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124`
     Note: [in case Mac complains that it's not downloaded from App Store](https://support.apple.com/guide/mac-help/if-an-app-is-not-from-the-mac-app-store-mh40620/11.0/mac/11.0))
 5. `cd ~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124`
@@ -18,9 +18,9 @@ To install OWASP PDF 4.2 executable on your Mac,
 7. Run `./owasp_pdf -l LLM_en-US` in your Mac terminal window and verify the released PDF file is successfully built.
 
 ```
-$ cd ~/Desktop/Playbook/dist_4.2.0_20241124
+$ cd ~/Desktop/Playbook/dist_4.2.1_20241129
 $ shasum -a 256 owasp_pdf
-284359484ca905a9a25aa86ad01be4b671cd6823c614755d88c534f2647bb522  owasp_pdf
+f5fd260a074df3fc6aefaf05d8fe40fd9b96e9c075f47304d49f9125fa726fbb  owasp_pdf
 $ cp owasp_pdf ~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124/
 $ cd ~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124
 $ ./owasp_pdf -r
@@ -40,5 +40,5 @@ $ ./owasp_pdf -l LLM_en-US
     1. User's Guide
     2. Project Owner's Guide
     3. Registration Package Builder's Guide
-Note: Existing ["Getting Started" ](https://github.com/Setotet/owasp_pdf/blob/main/README.pdf) is equivalent to 1 + 2.
+Note: Archived owasp_pdf_3 ["Getting Started" ](https://github.com/tetsuoseto/owasp_pdf_4/blob/main/doc_archives/owasp_pdf_3/README.pdf) is equivalent to 1 + 2.
 
