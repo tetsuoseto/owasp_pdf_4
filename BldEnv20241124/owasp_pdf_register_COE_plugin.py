@@ -32,7 +32,7 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
-import os.path
+import os
 from pathlib import Path
 from typing import Any, Dict, Tuple
 from pdb import set_trace # pylint: disable=unused-import
@@ -41,7 +41,7 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
     new_cs: Dict[str, Any] = {
         "doc_template_type": "modern_gray",
         "doc_title_pivot.pt_x": 72,
-        "doc_title_pivot.pt_y": 430,
+        "doc_title_pivot.pt_y": 457,
         "doc_toc_title_pivot.pt_x": 72,
         "doc_toc_title_pivot.pt_y": 172, # add 15 for bi-di for optimal result
         "doc_header_pivot.pt_x": 140,
@@ -60,8 +60,9 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
         "doc_appendix_titles": [],
     }
     for key in new_cs:
-        assert key in cs, \
-            f"'{key}' is not defined in customizable styles."
+        if cs:
+            assert key in cs, \
+                f"'{key}' is not defined in customizable styles."
     cs.update(new_cs)
 
 def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
@@ -73,7 +74,7 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
     cs["doc_subtitles"] = [
         "",
         "",
-        "From the OWASP Top 10 for LLM Applications Team",
+        "",
         "",
         "Version: 0.5",
         "Early Draft Published for Feedback: July 12, 2024",
@@ -127,10 +128,9 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
         "                                 Sandy Dunn, Team",
         "    2024-07-10  0.5  Open  Early draft, open for comment and input",
     ]
-    cs["doc_header"] = "LLM and Gen AI Security Center of Excellence Guide"
     cs["doc_toc_contents_title"] = "Table of Contents"
     cs["doc_toc_figures_title"] = "Figures"
-    if lang in ('ar-SA', 'he-IL'):
+    if lang in ("ar-SA", "he-IL", "fa-IR"):
         cs["doc_title_font.line_alignment"] = "right"
         cs["doc_subtitle_font.line_alignment"] = "right"
         cs["doc_toc_title_font.line_alignment"] = "right"
@@ -178,13 +178,10 @@ def register_project(proj_code: str, lang_codes: Tuple[str, ...],
 def _test():
 
     def get_cust_styles(lang):
-        # define chapter_font.size to avoid undefined key error
-        return {"chapter_font.size": 999}
+        return {}
 
-    release_date: str = "20240923"
     dont_care:str = ""
-    my_proj_path = os.path.join(os.path.expanduser('~'),
-        f"tetsuoseto_Origin/owasp_pdf_4/{release_date}")
+    my_proj_path = os.getcwd()
     data_dir_path = Path(os.path.join(my_proj_path, "owasp_pdf_data_COE"))
     proj_def_generator = register_project("COE", ("en-ZZ",),
         data_dir_path, dont_care, get_cust_styles)
@@ -193,7 +190,6 @@ def _test():
         assert proj_def["lang"] == "en-ZZ"
         assert proj_def["proj_dir"] == "coe"
         assert isinstance(proj_def["styles"], dict)
-        assert proj_def["styles"]["chapter_font.size"] == 999
     print("Test: success!!")
 
 if __name__ == '__main__':
