@@ -6,7 +6,7 @@
         "لتطبيقات LLM 2025"
     ],
     "doc_title_pivot.pt_x": 72,
-    "doc_title_pivot.pt_y": 475,
+    "doc_title_pivot.pt_y": 505,
     "doc_subtitles": [
         "",
         "",
@@ -19,7 +19,7 @@
     "doc_site_url": "https://genai.owasp.org/",
     "doc_header": "",
     "doc_header_pivot.pt_x": 140,
-    "doc_header_pivot.pt_y": 150,
+    "doc_header_pivot.pt_y": 50,
     "doc_legal_notice": true,
     "doc_legal_notice_words": [
         "LICENSE AND USAGE",
@@ -61,7 +61,7 @@
     "doc_toc": true,
     "doc_authors_toc": false,
     "doc_toc_title_pivot.pt_x": 72,
-    "doc_toc_title_pivot.pt_y": 187,
+    "doc_toc_title_pivot.pt_y": 172,
     "doc_toc_contents_title": "Table of Contents",
     "doc_toc_figures_title": "Figures",
     "doc_watermark": true,
@@ -83,7 +83,7 @@
     "doc_appendix_title_font.line_alignment": "right",
     "doc_appendix_title_font.color": "black",
     "chapter_pivot.pt_x": 72,
-    "chapter_pivot.pt_y": 145,
+    "chapter_pivot.pt_y": 130,
     "chapter_font.size": 24,
     "chapter_font.line_pitch": 35.0,
     "chapter_font.line_alignment": "right",

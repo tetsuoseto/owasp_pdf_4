@@ -32,8 +32,9 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
-import os.path
+import os
 from pathlib import Path
+import shutil
 from typing import Any, Dict, Tuple
 
 from PIL import Image
@@ -66,8 +67,9 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
         "unordered_list_marker": "square",
     }
     for key in new_cs:
-        assert key in cs, \
-            f"'{key}' is not defined in customizable styles."
+        if cs:
+            assert key in cs, \
+                f"'{key}' is not defined in customizable styles."
     cs.update(new_cs)
 
 def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
@@ -243,6 +245,22 @@ def _create_gov_blank_page(paper_size: Tuple, paper_size_str: str,
     canvas.showPage()
     canvas.save()
 
+def _copy_template_pdfs_RtoL(data_dir_path):
+    paper_sizes = ["LETTER", "A4"]
+    pdf_path = data_dir_path/"templates/page_pdfs"
+    place_holder = "{}"
+    templates = [
+        f"1_gov_cover_{place_holder}{place_holder}.pdf",
+        f"2_gov_chapter_{place_holder}{place_holder}.pdf",
+        f"3_gov_body_{place_holder}{place_holder}.pdf",
+        f"4_gov_toc_{place_holder}{place_holder}.pdf",
+        ]
+    for paper_size in paper_sizes:
+        for template in templates:
+            src = pdf_path/template.format(paper_size, "")
+            dst = pdf_path/template.format(paper_size, "_RtoL")
+            shutil.copyfile(src, dst)
+
 def _create_template_pdfs(proj_code, data_dir_path, temp_dir_path):
     paper_sizes = [LETTER, A4]
     for paper_size in paper_sizes:
@@ -255,6 +273,7 @@ def _create_template_pdfs(proj_code, data_dir_path, temp_dir_path):
             data_dir_path, temp_dir_path, "body")
         _create_gov_blank_page(paper_size, paper_size_str,
             data_dir_path, temp_dir_path, "toc")
+    _copy_template_pdfs_RtoL(data_dir_path)
     use_default_templates = False
     return use_default_templates
 
@@ -293,10 +312,8 @@ def _test():
     def get_cust_styles(lang):
         return {}
 
-    release_date: str = "20240923"
     dont_care:str = ""
-    my_proj_path = os.path.join(os.path.expanduser('~'),
-        f"tetsuoseto_Origin/owasp_pdf_4/{release_date}")
+    my_proj_path = os.getcwd()
     data_dir_path = Path(os.path.join(my_proj_path, "owasp_pdf_data_GOV"))
     proj_def_generator = register_project("GOV", ("en-ZZ",),
         data_dir_path, dont_care, get_cust_styles)

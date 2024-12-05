@@ -35,7 +35,7 @@ Attacks designed to disrupt service, deplete the target's financial resources, o
   Monitor and manage resource allocation dynamically to prevent any single user or request from consuming excessive resources.
 #### 5. Timeouts and Throttling
   Set timeouts and throttle processing for resource-intensive operations to prevent prolonged resource consumption.
-#### 6.Sandbox Techniques
+#### 6. Sandbox Techniques
   Restrict the LLM's access to network resources, internal services, and APIs.
   - This is particularly significant for all common scenarios as it encompasses insider risks and threats. Furthermore, it governs the extent of access the LLM application has to data and resources, thereby serving as a crucial control mechanism to mitigate or prevent side-channel attacks.
 #### 7. Comprehensive Logging, Monitoring and Anomaly Detection

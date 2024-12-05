@@ -101,7 +101,7 @@
     "body_font.line_alignment": "justified",
     "reference_font.size": 10.0,
     "reference_font.line_pitch": 14.0,
-    "reference_font.line_alignment": "justified",
+    "reference_font.line_alignment": "left",
     "header_font.color": "white",
     "blockquote_font.size": 10.0,
     "blockquote_font.line_pitch": 14.0,
