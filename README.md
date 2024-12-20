@@ -1,5 +1,5 @@
 # OWASP PDF 4 Release Repository
-## OWASP PDF 4.3.1 20241217 Update
+## OWASP PDF 4.3.2 20241220 Update
 ### Supported projects: GOV, COE, IPS, LLM, ZZZ, RTG
 ### Project registration package
     - custom style json
@@ -7,10 +7,10 @@
     - template image files
     - plug-in Python script: owasp_pdf_register_<proj_code>_plugin.py
 
-To install OWASP PDF 4.3.1 executable on your Mac,
+To install OWASP PDF 4.3.2 executable on your Mac,
 1. `git clone` or [Download ZIP](https://github.com/tetsuoseto/owasp_pdf_4/archive/refs/heads/main.zip) of this repo (owasp_pdf_4) under any directory, e.g., `Playbook` on your desktop: `~/Desktop/Playbook`
-2. Double Click dist_4.3.1_20241217 zip file to decompress it to `~/Desktop/Playbook/owasp_pdf_4/dist_4.3.1_20241217` folder
-3. Open terminal window, `cd` to `~/Desktop/Playbook/owasp_pdf_4/dist_4.3.1_20241217` directory and run `shasum -a 256 owasp_pdf` to calculate the sha256 hash code of `owasp_pdf` executable. It should match `6babcfec3c21269f1eda61e40f8a6abb4715495169bbf9e459fc73c554387479`
+2. Double Click dist_4.3.2_20241220 zip file to decompress it to `~/Desktop/Playbook/owasp_pdf_4/dist_4.3.2_20241220` folder
+3. Open terminal window, `cd` to `~/Desktop/Playbook/owasp_pdf_4/dist_4.3.2_20241220` directory and run `shasum -a 256 owasp_pdf` to calculate the sha256 hash code of `owasp_pdf` executable. It should match `47a21e60e9c1db16f1a40b5a3aae93d62d18c9181a208e6745ee831d2d1d39fd`
 4. Copy `owasp_pdf` executable file to `~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124`
     Note: [in case Mac complains that it's not downloaded from App Store](https://support.apple.com/guide/mac-help/if-an-app-is-not-from-the-mac-app-store-mh40620/11.0/mac/11.0))
 5. `cd ~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124`
@@ -18,9 +18,9 @@ To install OWASP PDF 4.3.1 executable on your Mac,
 7. Run `./owasp_pdf -l LLM_en-US` in your Mac terminal window and verify the released PDF file is successfully built.
 
 ```
-$ cd ~/Desktop/Playbook/owasp_pdf_4/dist_4.3.1_20241217
+$ cd ~/Desktop/Playbook/owasp_pdf_4/dist_4.3.2_20241220
 $ shasum -a 256 owasp_pdf
-6babcfec3c21269f1eda61e40f8a6abb4715495169bbf9e459fc73c554387479  owasp_pdf
+47a21e60e9c1db16f1a40b5a3aae93d62d18c9181a208e6745ee831d2d1d39fd  owasp_pdf
 $ cp owasp_pdf ~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124/
 $ cd ~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124
 $ ./owasp_pdf -r
