@@ -14,14 +14,14 @@ Remember, an issue is not the place to ask questions. You can use [#owasp_pdf_us
 **OWASP_PDF Version:** 
 ```
 $ ./owasp_pdf -v
-OWASP_PDF Version: OWASP PDF v3.9.4 20240623-070711
+OWASP_PDF Version: OWASP PDF v4.4.1 20250126-131847
 ```
 
 #### Did you see error code?
 ----------------------------------------
-**Errcode:** 
+**Error message:** 
 ```
-[v3.9.4] [Errcode p1049] [<tag text>] <additional log ...>
+[v4.4.1 LLM_en-US] [PID 57945] [Errcode p1049] [Errfun format_text] [Errmsg ...]
 ```
 
 -------------------------------------------
