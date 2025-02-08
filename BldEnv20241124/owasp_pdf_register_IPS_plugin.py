@@ -4,7 +4,7 @@
 """
 BSD 3-Clause License
 
-Copyright (c) 2024, Tetsuo Seto
+Copyright (c) 2024-2025, Tetsuo Seto
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -58,22 +58,7 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
     cs["doc_header"] = "Lorem Ipsum"
     cs["doc_header_pivot.pt_x"] = 72
     cs["doc_header_pivot.pt_y"] = 36
-    cs["doc_legal_notice_words"] = [
-        "Text in this document was copied from https://www.lipsum.com/ and",
-        "the intellectual right of the text belongs to lipsum.com.",
-        "Privacy policy of lipsum.com is on https://www.lipsum.com/privacy.",
-        "",
-        "The information provided in this document does not, and" + \
-            " is not intended to, constitute",
-        " legal advice. All information is for general informational" + \
-            " purposes only.",
-        "",
-        "This project is licensed under the terms of the Creative Commons" + \
-            " Attribution-ShareAlike 4.0",
-        "International License.  ( https://creativecommons.org/" + \
-            "licenses/by-sa/4.0/ )",
-        "",
-        "Revision History",
+    cs["doc_revision_history"] = [
         "    2024-09-01  English  0.1  initial draft"
     ]
     cs["doc_title_font.size"] = 50
