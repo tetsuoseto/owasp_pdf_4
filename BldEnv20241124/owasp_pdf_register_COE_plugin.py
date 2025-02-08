@@ -4,7 +4,7 @@
 """
 BSD 3-Clause License
 
-Copyright (c) 2024, Tetsuo Seto
+Copyright (c) 2024-2025, Tetsuo Seto
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -44,8 +44,8 @@ def _set_proj_common_fields(cs: Dict[str, Any]):
         "doc_title_pivot.pt_y": 457,
         "doc_toc_title_pivot.pt_x": 72,
         "doc_toc_title_pivot.pt_y": 172, # add 15 for bi-di for optimal result
-        "doc_header_pivot.pt_x": 140,
-        "doc_header_pivot.pt_y": 150,
+        "doc_header_pivot.pt_x": 100,
+        "doc_header_pivot.pt_y": 16,
         "chapter_pivot.pt_x": 72,
         "chapter_pivot.pt_y": 130,
         "doc_title_font.size": 40,
@@ -79,50 +79,7 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
         "Version: 0.5",
         "Early Draft Published for Feedback: July 12, 2024",
     ]
-    cs["doc_legal_notice_words"] = [
-        "The information provided in this document does not," + \
-            " and is not intended to,",
-        "constitute legal advice. All information is for general " + \
-            "informational purposes only.",
-        "",
-        "This document contains links to other third-party websites.",
-        "Such links are only for convenience and OWASP does not" + \
-            " recommend or endorse",
-        "the contents of the third-party sites.",
-        "",
-        "",
-        "LICENSE AND USAGE",
-        "",
-        "This document is licensed under Creative Commons, CC BY-SA 4.0",
-        "You are free to:",
-        "  Share — copy and redistribute the material in any medium" + \
-            " or format",
-        "  Adapt — remix, transform, and build upon the material for" + \
-            " any purpose, even commercially.",
-        "    under the following terms:",
-        "    Attribution — You must give appropriate credit, provide" + \
-            " a link to the license, and indicate",
-        "      if changes were made. You may do so reasonably, but not" + \
-            " in any way that suggests",
-        "      the licensor endorses you or your use.",
-        "    Attribution Guidelines - must include the project name" + \
-            " and the name of the asset referenced.",
-        "    ShareAlike — If you remix, transform, or build upon " + \
-            "the material, you must distribute",
-        "      your contributions under the same license as the original.",
-        "Link to full license text:",
-        "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
-        "",
-        "The information provided in this document does not, and is not",
-        "intended to, constitute legal advice. All information is for",
-        "general informational purposes only. This document contains links to",
-        "other third-party websites. Such links are only for convenience and",
-        "OWASP does not recommend or endorse the contents of " + \
-            "the third-party sites.",
-        "",
-        "",
-        "REVISION HISTORY",
-        "",
+    cs["doc_revision_history"] = [
         "    2024-05-15  0.1  Scott Clinton  Initial Outline Draft",
         "    2024-07-02  0.2  Scott Clinton, Updated with initial comments",
         "                                 Sandy Dunn, Team",

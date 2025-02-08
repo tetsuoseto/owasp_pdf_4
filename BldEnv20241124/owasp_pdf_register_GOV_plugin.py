@@ -4,7 +4,7 @@
 """
 BSD 3-Clause License
 
-Copyright (c) 2024, Tetsuo Seto
+Copyright (c) 2024-2025, Tetsuo Seto
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -91,22 +91,7 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
         cs["doc_toc_contents_title"] = "Table of Contents"
         cs["doc_toc_figures_title"] = "Figures"
         cs["doc_legal_notice"] = True
-        cs["doc_legal_notice_words"] = [
-            "The information provided in this document does not, and is" + \
-                " not intended to, constitute legal advice.",
-            "All information is for general informational purposes only.",
-            "",
-            "This document contains links to other third-party websites." + \
-                " Such links are only for convenience",
-            "and OWASP does not recommend or endorse the contents of the" + \
-                " third-party sites.",
-            "",
-            "This project is licensed under the terms of the Creative " + \
-                "Commons Attribution-ShareAlike 4.0 ",
-            " International License. " + \
-                "( https://creativecommons.org/licenses/by-sa/4.0/ )",
-            "",
-            "Revision History",
+        cs["doc_revision_history"] = [
             "    2023-11-01  English  0.1  initial draft",
             "    2023-12-06  English  0.5  public draft",
             "    2024-02-15  English  0.9  pre-release draft",
@@ -133,17 +118,7 @@ def _set_lang_specific_fields(cs: Dict[str, Any], lang:str):
         cs["doc_toc_contents_title"] = "目 次"
         cs["doc_toc_figures_title"] = "図 表"
         cs["doc_legal_notice"] = True
-        cs["doc_legal_notice_words"] = [
-            "本書で提供される情報は、法的助言を構成するものではなく、また構成することを意図する",
-            "ものでもありません。すべての情報は一般的な情報提供のみを目的としています。",
-            "",
-            "この文書には、他の第三者のウェブ・サイトへのリンクが含まれていますが、",
-            "OWASPは、それら第三者のサイトのコンテンツを推奨または保証するものではありません。",
-            "",
-            "このプロジェクトは、クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンスの下でライセンスされています。",
-            "https://creativecommons.org/licenses/by-sa/4.0/deed.ja",
-            "",
-            "改定履歴",
+        cs["doc_revision_history"] = [
             "　　2023-11-01　英語版　0.1　initial draft",
             "　　2023-12-06　英語版　0.5　public draft",
             "　　2024-02-15　英語版　0.9　pre-release draft",

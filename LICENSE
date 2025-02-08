@@ -1,4 +1,6 @@
-All markdown files under BldEnv* directory are copied from https://github.com/OWASP/www-project-top-10-for-large-language-model-applications and licensed under https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/blob/main/LICENSE.md.
+Markdown files copied from https://github.com/OWASP/www-project-top-10-for-large-language-model-applications and their derivatives such as localized markdown files under BldEnv* directory are licensed under https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/blob/main/LICENSE.md.
+
+owasp_pdf proper files are licensed under BSD 3-Clause License.
 
 ------------------
 BSD 3-Clause License
