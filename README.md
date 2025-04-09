@@ -1,5 +1,5 @@
 # OWASP PDF 4 Release Repository
-## OWASP PDF OWASP PDF v4.5.0 20250301-210329 Update
+## OWASP PDF OWASP PDF v4.5.1 20250407-095950 Update
 ### Supported projects: GOV, COE, IPS, LLM, ZZZ, RTG
 ### Project registration package
     - custom style json
@@ -7,10 +7,10 @@
     - template image files
     - plug-in Python script: owasp_pdf_register_<proj_code>_plugin.py
 
-To install OWASP PDF 4.5.0 executable on your Mac,
+To install OWASP PDF 4.5.1 executable on your Mac,
 1. `git clone` or [Download ZIP](https://github.com/tetsuoseto/owasp_pdf_4/archive/refs/heads/main.zip) of this repo (owasp_pdf_4) under any directory, e.g., `Playbook` on your desktop: `~/Desktop/Playbook`
-2. Double Click dist_4.5.0_20250301 zip file to decompress it to `~/Desktop/Playbook/owasp_pdf_4/dist_4.5.0_20250301` folder
-3. Open terminal window, `cd` to `~/Desktop/Playbook/owasp_pdf_4/dist_4.5.0_20250301` directory and run `shasum -a 256 owasp_pdf` to calculate the sha256 hash code of `owasp_pdf` executable. It should match `e83d81ef9cc1d4015966b11b61d729bc7307904afa9e70beb8ab3b7560936d06`
+2. Double Click dist_4.5.1_202504071 zip file to decompress it to `~/Desktop/Playbook/owasp_pdf_4/dist_4.5.1_202504071` folder
+3. Open terminal window, `cd` to `~/Desktop/Playbook/owasp_pdf_4/dist_4.5.1_202504071` directory and run `shasum -a 256 owasp_pdf` to calculate the sha256 hash code of `owasp_pdf` executable. It should match `f0611aabaef834d94f783aa0a6e2d672d0b18f912ae0e9dc77c449c280de69f7`
 4. Copy `owasp_pdf` executable file to `~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124`
 5. `cd ~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124`
     Note: [in case Mac complains that it's not downloaded from App Store](https://support.apple.com/guide/mac-help/if-an-app-is-not-from-the-mac-app-store-mh40620/11.0/mac/11.0))
@@ -19,18 +19,18 @@ To install OWASP PDF 4.5.0 executable on your Mac,
 7. Run `./owasp_pdf -l LLM_en-US` in your Mac terminal window and verify the released PDF file is successfully built.
 
 ```
-$ cd ~/Desktop/Playbook/owasp_pdf_4/dist_4.5.0_20250301
+$ cd ~/Desktop/Playbook/owasp_pdf_4/dist_4.5.1_202504071
 $ shasum -a 256 owasp_pdf
-e83d81ef9cc1d4015966b11b61d729bc7307904afa9e70beb8ab3b7560936d06  owasp_pdf
+f0611aabaef834d94f783aa0a6e2d672d0b18f912ae0e9dc77c449c280de69f7  owasp_pdf
 $ cp owasp_pdf ~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124/
 $ cd ~/Desktop/Playbook/owasp_pdf_4/BldEnv20241124
 $ ./owasp_pdf -v
-OWASP_PDF Version: OWASP PDF v4.5.0 20250301-210329
+OWASP_PDF Version: OWASP PDF v4.5.1 20250301-210329
 $ ./owasp_pdf -l LLM_en-US
 *** Loaded 'owasp_pdf_register_LLM_plugin'
 *** Processing LLM_en-US
-    806 lines written to <your working directory>/owasp_pdf_4/BldEnv20241124/2_0_vulns/en-US/baseline/LLMAll_en-US.md
-    43 page PDF created on <your working directory>/owasp_pdf_4/BldEnv20241124/2_0_vulns/en-US/baseline/LLMAll_en-US.pdf
+    805 lines written to <your working directory>/owasp_pdf_4/BldEnv20241124/2_0_vulns/en-US/baseline/LLMAll_en-US.md
+        43 page PDF created on <your working directory>/owasp_pdf_4/BldEnv20241124/2_0_vulns/en-US/baseline/LLMAll_en-US.pdf
     Processing time: 54 seconds
 ```
 
