@@ -7,17 +7,13 @@ assignees: ''
 
 ---
 
-**Project Code**
+**Project Code** (to be filled in by the requester)
 One project code such as "LLM"
 
-**Language Codes**
+**Language Codes** (to be filled in by the requester)
 One or more language codes such as "ar-SA, ja-JP, th-TH"
 
-**A recipient of the publish-ready/watermark-removed PDF**
-At closure of the escrow, the escrow manager will DM it on slack.
-One Slack ID can be specified. Default is the project owner.
-
-**Source Commit ID URL**
+**Source Commit ID URL** (to be filled in by the requester)
 unique SHA or hash for the commit of the source MD files, custom JSON, and image files.
 
 example: https://github.com/johndow/llm_2025/commit/8d0cf83dca3b1c47e83da0d1ac5046376dd49071
@@ -34,7 +30,7 @@ ar-SA
           ├── image_000.jpeg
           └── image_001.png
 
-**Escrow Manager**
+**Escrow Manager** (to be filled in by the escrow manager if/when the request is accepted)
 Slack ID to be assigned when the escrow request is accepted.
 
 
